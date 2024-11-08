@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Article preview component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+        position: absolute;
+        top: 97vh;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+
+      :root {
+        --cor1: hsl(217, 19%, 35%);
+        --cor2: hsl(214, 17%, 51%);
+        --cor3: hsl(212, 23%, 69%);
+        --cor4: hsl(210, 46%, 95%);
+      }
+
+      body {
+        font-family: "Manrope", sans-serif;
+        background-color: var(--cor4);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        
+      }
+
+      main {
+        width: 950px;
+        background-color: white;
+        box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.084);
+        border-radius: 10px;
+        display: flex;
+      }
+
+      .left {
+        background-image: url(images/drawers.jpg);
+        background-size: 27.4vw;
+        background-repeat: no-repeat;
+        width: 60vw;
+      }
+
+      .right {
+        padding: 0px 80px 40px 40px;
+      }
+
+      .right h1 {
+        margin-bottom: 25px;
+        color: var(--cor2);
+        font-size: 30px;
+      }
+
+      .right p {
+        margin-bottom: 30px;
+        color: var(--cor3);
+        font-weight: 600;
+        font-size: 18px;
+      }
+
+      .right .profile {
+        display: flex;
+        color: var(--cor2);
+        justify-content: space-between;
+      }
+
+      .right .profile b {
+        margin-bottom: 2px;
+        padding: 3px;
+      }
+
+      .right .profile img {
+        margin-right: 23px;
+        height: 50px;
+        border-radius: 50%;
+      }
+
+      .right .date {
+        padding: 0px;
+        margin-top: 3px;
+        color: var(--cor3);
+      }
+
+      .right .info {
+        display: flex;
+      }
+
+      .right .share {
+        display: none;
+      }
+
+      .right .share-button {
+        padding: 0px;
+        margin: 0px;
+        border: 0px;
+        border-radius: 50%;
+      }
+
+      .right .share-button svg {
+        padding: 10px;
+        margin: 0px;
+        width: 20px;
+        height: 20px;
+      }
+
+      .share {
+        padding: 20px;
+        display: flex;
+        background-color: var(--cor1);
+        border-radius: 10px;
+        width: 200px;
+        justify-content: center;
+        box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.042);
+      }
+
+      .share span{
+        margin-right:50px ;
+        color: var(--cor3);
+        font-weight: 600;
+        text-transform: uppercase;
+        height: 20px;
+        width: 20px;
+      }
+
+      .share img{
+        padding: 0px 5px 0px 5px;
+      }
+
+      .ponta{
+        margin: auto;
+        width: 0;
+        height: 0;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-top: 15px solid var(--cor1);
+        
+      }
+
+      .share-pop-up{
+        position:relative;
+        left: 375px;
+        bottom: 170px;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="left"></section>
+      <section class="right">
+        <h1>
+          Shift the overall look and feel by adding these wonderful touches to
+          furniture in your home
+        </h1>
+        <p>
+          Ever been in a room and felt like something was missing? Perhaps it
+          felt slightly bare and uninviting. I’ve got some simple tips to help
+          you make any room feel complete.
+        </p>
+        <aside class="profile">
+          <section class="info">
+            <img src="images/avatar-michelle.jpg" alt="" />
+            <section class="text">
+              <b>Michelle Appleton</b> <br />
+              <div class="date">28 Jun 2020</div>
+            </section>
+          </section><section class="share-area">
+            
+            <button class="share-button">
+              <svg xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"
+                />
+              </svg>
+            </button>
+          </section>
+      </section>
+    </main>
+    <aside class="share-pop-up">
+      <div class="share">
+        <span class="text">Share</span>
+        <img src="images/icon-facebook.svg" alt="" />
+        <img
+          src="images/icon-twitter.svg"
+          alt=""
+        />
+        <img src="images/icon-pinterest.svg" alt="" />
+      </div>
+      <div class="ponta"></div>
+    </aside>
+  </aside>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">José Arthur Nascimento Santos</a>.
+    </div>
+
+    <script>
+      const SHARE_BUTTON = document.querySelector(".share-button");
+      const SHARE_POP_UP = document.querySelector(".share-pop-up")
+
+      SHARE_BUTTON.addEventListener("click", () => {
+        if (SHARE_BUTTON.style.background == "var(--cor2)") {
+          SHARE_BUTTON.style.background = "#f0f0f0";
+          SHARE_BUTTON.style.fill = "black";
+          SHARE_POP_UP.style.display = "none";
+        } else {
+          SHARE_BUTTON.style.background = "var(--cor2)";
+          SHARE_BUTTON.style.fill = "var(--cor4)";
+          SHARE_POP_UP.style.display = "block";
+        }
+      });
+    </script>
+  </body>
+</html>
